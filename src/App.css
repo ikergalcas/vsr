@@ -1,0 +1,136 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container-almacen{
+  width: 300px;;
+  height: 300px;
+  background-color: lightblue;
+}
+
+.slogan {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; 
+  text-align: center;
+  text-transform: uppercase; 
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.azulito{
+  color: #54A6F0;
+}
+
+.btn-custom {
+  background-color: #EF726B;
+  color: black;
+}
+
+.my-btn-custom {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #bb5751 ;
+}
+
+.navbar-logo {
+  width: 50px !important;
+  border-radius: 20%;
+}
+
+.navbar-link {
+  color: #fff4e3 !important;
+  margin-right: 10px;
+  font-size: x-large;
+}
+
+.navbar-link:hover{
+  color: #fff4e3 !important;
+  font-weight: bold !important;
+}
+
+.navbar-collapse{
+  color: #fff4e3 !important;
+}
+
+.gradient-down{
+  background: linear-gradient(to bottom, #bb5751 , #ffb452);
+}
+
+.fondo{
+ background: #fff4e3;
+}
+
+
+.fondoOut{
+  background: #fff4e3;
+  height: 100vmin;
+}
+
+.fondoCompartidos{
+  background: #b5986c59;
+}
+
+.largoMin{
+  height: 50vmin;
+}
+
+.fondoLogin{
+  background-image: radial-gradient(circle at 31.78% 48.41%, #ffd679 0, #ffc776 12.5%, #fbb674 25%, #eca371 37.5%, #d8906c 50%, #c27e67 62.5%, #af6f62 75%, #9e645e 87.5%, #8f5a5a 100%);
+}
+
+.primario {
+  background-color: #54A6F0 !important;
+  color: black !important
+}
+
+.rojo{
+  background-color: #EF726B !important;
+}
