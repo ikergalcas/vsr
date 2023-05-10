@@ -96,13 +96,13 @@ const CompLogin = () => {
                                                     </div>
                                                 </div>
                                             )}
-                                            <button type='submit' className='btn primario' tabindex="0">Iniciar Sesion</button>
+                                            <button type='submit' className='btn primario' tabindex="0" for="Iniciar">Iniciar Sesion</button>
                                         </form>
                                     </div>
                                 </div>
                                 <div className='row'>
                                     <div className='col mt-3'>
-                                        <h3 tabindex="0">¿No tienes cuenta? <Link to="/registro" className='btn rojo' tabindex="0">Registrate</Link></h3>
+                                        <h3 tabindex="0">¿No tienes cuenta? <Link to="/registro" className='btn rojo' tabindex="0" for="Registrar">Registrate</Link></h3>
                                         
                                     </div>
                                 </div>
