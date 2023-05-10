@@ -26,7 +26,7 @@ import ObjetoBloque from './pages/ObjetoBloque';
 
 function App() {
   return (
-    <html lang='es'>
+    <html>
     <div className="App fondoOut">
       <BrowserRouter>
         <Routes>

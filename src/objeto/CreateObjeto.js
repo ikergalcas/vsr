@@ -15,8 +15,27 @@ const CompCreateObjetos = () => {
     const [condiciones, setCondiciones] = useState('')
     const [error, setError] = useState(null)
 
+
+    function checkImage(url) {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve(true);
+          img.onerror = () => reject(false);
+          img.src = url;
+        });
+      }
+
     const crearObjeto = async (e) => {
         e.preventDefault()
+
+        // Comprobar si la imagen es válida
+        const isValidImage = await checkImage(foto);
+        
+        if (!isValidImage) {
+            setError('La imagen no es válida');
+            return;
+        }
+
         const res = await axios.get(URIobjetos)
         let objetos = res.data
         const objetoExiste = objetos.find(objeto => nombre == objeto.nombre && objeto.almacenAsociado == idAlmacen) 
