@@ -60,7 +60,7 @@ const CompEditPerfil = () => {
                 <div className='row'>
                     <div className='col-md-4'></div>
                     <div className='col-md-4'>
-                        <div className='card' style={{padding: '20px', backgroundColor:'rgba(255, 255, 255, 0.9)'}}>
+                        <div className='card' style={{padding: '20%', backgroundColor:'rgba(255, 255, 255, 0.9)'}}>
                             <div className='container-fluid'>
                                 <div className='row'>
                                     <div className='col'>
@@ -71,8 +71,10 @@ const CompEditPerfil = () => {
                                     <div className='col'>
                                         <form onSubmit={editar}>
                                             <div className='mb-3'>
-                                                <label className='form-label' tabindex="0">Nombre de usuario*</label>
+                                                <label className='form-label' tabindex="0" htmlFor="userName">Nombre de usuario*</label>
                                                 <input
+                                                    id="userName"
+                                                    title="Nombre de usuario"
                                                     defaultValue={username}
                                                     onChange={ (e) => setUsername(e.target.value)}
                                                     type="text"
@@ -83,8 +85,10 @@ const CompEditPerfil = () => {
                                                 />
                                             </div>
                                             <div className='mb-3'>
-                                                <label className='form-label' tabindex="0">Correo electronico*</label>
+                                                <label className='form-label' tabindex="0" htmlFor="email">Correo electronico*</label>
                                                 <input
+                                                    id="email"
+                                                    title="Correo electronico"
                                                     defaultValue={email}
                                                     onChange={ (e) => setEmail(e.target.value)}
                                                     type="text"
@@ -95,8 +99,10 @@ const CompEditPerfil = () => {
                                                 />
                                             </div>
                                             <div className='mb-3'>
-                                                <label className='form-label' tabindex="0">Contraseña*</label>
+                                                <label className='form-label' tabindex="0" htmlFor="password">Contraseña*</label>
                                                 <input
+                                                    id="password"
+                                                    title="Contraseña"
                                                     defaultValue={password}
                                                     onChange={ (e) => setPassword(e.target.value)}
                                                     type="password"
@@ -107,8 +113,10 @@ const CompEditPerfil = () => {
                                                 />
                                             </div>
                                             <div className='mb-3'>
-                                                <label className='form-label' tabindex="0">Nombre*</label>
+                                                <label className='form-label' tabindex="0" htmlFor="nombre">Nombre*</label>
                                                 <input
+                                                    id="nombre"
+                                                    title="Nombre de usuario"
                                                     defaultValue={name}
                                                     onChange={ (e) => setName(e.target.value)}
                                                     type="text"
@@ -119,8 +127,10 @@ const CompEditPerfil = () => {
                                                 />
                                             </div>
                                             <div className='mb-3'>
-                                                <label className='form-label' tabindex="0">Apellido</label>
+                                                <label className='form-label' tabindex="0" htmlFor="apellido">Apellido</label>
                                                 <input
+                                                    id="apellido"
+                                                    title="Apellido"
                                                     defaultValue={apellid}
                                                     onChange={ (e) => setApellid(e.target.value)}
                                                     type="text"
@@ -129,8 +139,8 @@ const CompEditPerfil = () => {
                                                     aria-label="Ingrese nuevo apellido"
                                                 />
                                             </div>
-                                            <button type='submit' className='btn primario mt-3'  tabindex="0">Confirmar Cambios</button> <br/>
-                                            <button onClick={volverAtras} className='btn btn-secondary mt-2'  tabindex="0">Volver atrás</button> 
+                                            <button type='submit' className='btn primario mt-3'  tabindex="0" title='Confirmar los cambios'>Confirmar Cambios</button> <br/>
+                                            <button onClick={volverAtras} className='btn btn-secondary mt-2'  tabindex="0" title='Volver a la página anterior'>Volver atrás</button> 
                                         </form>
                                     </div>
                                 </div>
