@@ -103,7 +103,7 @@ const CompRegistro = () =>{
                                         <div className='col'>
                                             <form onSubmit={registro}>
                                                 <div className='mb-3'>
-                                                    <label className='form-label'>Nombre de usuario*</label>
+                                                    <label className='form-label' htmlFor="nombreUs">Nombre de usuario*</label>
                                                     <input
                                                         value={nombreUs}
                                                         onChange={ (e) => setNombreUs(e.target.value)}
@@ -113,10 +113,11 @@ const CompRegistro = () =>{
                                                         required='true'
                                                         tabindex="0"
                                                         aria-label="Ingrese su nombre de usuario"
+                                                        title="Nombre de usuario"
                                                     />
                                                 </div>
                                                 <div className='mb-3'>
-                                                    <label className='form-label'>Correo electrónico*</label>
+                                                    <label className='form-label' htmlFor="correo">Correo electrónico*</label>
                                                     <input
                                                         value={correo}
                                                         onChange={ (e) => setCorreo(e.target.value)}
@@ -126,10 +127,11 @@ const CompRegistro = () =>{
                                                         required='true'
                                                         tabindex="0"
                                                         aria-label="Ingrese su correo electronico"
+                                                        title="Correo electornico"
                                                     />
                                                 </div>
                                                 <div className='mb-3'>
-                                                    <label className='form-label'>Contraseña*</label>
+                                                    <label className='form-label' htmlFor="password">Contraseña*</label>
                                                     <input
                                                         value={password}
                                                         onChange={ (e) => setPassword(e.target.value)}
@@ -139,10 +141,11 @@ const CompRegistro = () =>{
                                                         required='true'
                                                         tabindex="0"
                                                         aria-label="Ingrese una contraseña"
+                                                        title="Contraseña"
                                                     />
                                                 </div>
                                                 <div className='mb-3'>
-                                                    <label className='form-label'>Nombre*</label>
+                                                    <label className='form-label' htmlFor="nombre">Nombre*</label>
                                                     <input
                                                         value={nombre}
                                                         onChange={ (e) => setNombre(e.target.value)}
@@ -152,10 +155,11 @@ const CompRegistro = () =>{
                                                         required='true'
                                                         tabindex="0"
                                                         aria-label="Ingrese su nombre"
+                                                        title="Nombre"
                                                     />
                                                 </div>
                                                 <div className='mb-5'>
-                                                    <label className='form-label'>Apellido</label>
+                                                    <label className='form-label' htmlFor="apellido">Apellido</label>
                                                     <input
                                                         value={apellido}
                                                         onChange={ (e) => setApellido(e.target.value)}
@@ -164,6 +168,7 @@ const CompRegistro = () =>{
                                                         style={{ width: 'auto', margin: '0 auto' }}
                                                         tabindex="0"
                                                         aria-label="Ingrese su apellido"
+                                                        title="Apellido"
                                                     />
                                                 </div>
                                                 {error && (
