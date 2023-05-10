@@ -190,6 +190,7 @@ if (toastTrigger) {
                                                     <div className='col-xl-4'></div>
                                                     <div className='col-xl-4'>
                                                         <div style={{width:'50 vmin', justifyContent:'center',alignItems:'center'}}>
+                                                            {invitados.length > 0 ? 
                                                             <ul className="list-group">
                                                                 {invitados.map((inv) => (
                                                                     <li className="list-group-item d-flex justify-content-between align-items-center" tabindex="0"key={inv}>
@@ -200,6 +201,7 @@ if (toastTrigger) {
                                                                     </li>
                                                                 ))}
                                                             </ul>
+                                                            : null}
                                                         </div>
                                                     </div>
                                                     <div className='col-xl-4'></div>
