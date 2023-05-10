@@ -45,11 +45,12 @@ const CompLogin = () => {
     }
 
     return(
+        <html lang='es'>
         <div className='d-flex align-items-center vh-100 fondoLogin'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-lg-8'>
-                        <img  tabindex="0" src={fotoPortada} alt='Imagen de portada, Compartir es ahorrar' style={{width: '600px', height:'600px', objectFit:'contain'}} className="card-img-top img-fluid"></img>
+                        <img  tabindex="0" src={fotoPortada} alt='Imagen de portada' style={{width: '600px', height:'600px', objectFit:'contain'}} className="card-img-top img-fluid"></img>
                     </div>
                     <div className='col-lg-4'>
                         <div className='card mb-3' style={{backgroundColor:'rgba(255, 255, 255, 0.7)', marginTop:'30%'}}>
@@ -63,7 +64,7 @@ const CompLogin = () => {
                                     <div className='col'>
                                         <form onSubmit={inicioSesion}>
                                             <div className='mb-3'>
-                                                <label className='form-label'>Nombre de usuario</label>
+                                                <label className='form-label' for="user">Nombre de usuario</label>
                                                 <input
                                                     value={user}
                                                     onChange={ (e) => setUser(e.target.value)}
@@ -75,7 +76,7 @@ const CompLogin = () => {
                                                 />
                                             </div>
                                             <div className='mb-3'>
-                                                <label className='form-label'>Contraseña</label>
+                                                <label className='form-label' for="password">Contraseña</label>
                                                 <input
                                                     value={password}
                                                     onChange={ (e) => setPassword(e.target.value)}
@@ -95,13 +96,13 @@ const CompLogin = () => {
                                                     </div>
                                                 </div>
                                             )}
-                                            <button type='submit' className='btn primario' tabindex="0">Iniciar Sesion</button>
+                                            <button type='submit' className='btn primario' tabindex="0" for="Iniciar">Iniciar Sesion</button>
                                         </form>
                                     </div>
                                 </div>
                                 <div className='row'>
                                     <div className='col mt-3'>
-                                        <h3 tabindex="0">¿No tienes cuenta? <Link to="/registro" className='btn rojo' tabindex="0">Registrate</Link></h3>
+                                        <h3 tabindex="0">¿No tienes cuenta? <Link to="/registro" className='btn rojo' tabindex="0" for="Registrar">Registrate</Link></h3>
                                         
                                     </div>
                                 </div>
@@ -111,6 +112,7 @@ const CompLogin = () => {
                 </div>
             </div>
         </div>
+        </html>
     )
 }
 

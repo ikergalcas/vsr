@@ -63,65 +63,63 @@ function AlmacenBloque () {
     }
 
     return(
-        <html lang="esp">
-            <div>
-                <NavbarPer idUser={idUser}></NavbarPer>
-                <div className="container-fluid h-100">
-                    <div className="row">
-                        <div className="col fondo">
-                            <div className="row">
-                                <div className="col-md-3"></div>
-                                <div className="col-xl-6">
-                                    {almacen && <h1 className="mt-2">Almacen: {almacen.nombre}</h1>}
-                                    {propietarioAlmacen ? <form onSubmit={editarNombreAlmacen}>
-                                    <div className="row mt-4 align-items-center">
-                                        <div className="col-md-2"></div>
-                                        <div className="col-md-5">
-                                            <input 
-                                                value={nombreAlmacen}
-                                                onChange={ (e) => setNombreAlmacen(e.target.value)}
-                                                type="text"
-                                                className="form-control"
-                                                placeholder="(Nuevo nombre)"
-                                                style={{ width: '100%'}}
-                                                aria-label="Ingresar nuevo nombre de almacen"
-                                            />
-                                        </div>
-                                        <div className="col-md-3">
-                                            <button type='submit' className="ms-2 btn primario">Cambiar nombre</button>
-                                        </div>
-                                        <div className="col-md-2"></div>
+        <div>
+            <NavbarPer idUser={idUser}></NavbarPer>
+            <div className="container-fluid h-100">
+                <div className="row">
+                    <div className="col fondo">
+                        <div className="row">
+                            <div className="col-md-3"></div>
+                            <div className="col-xl-6">
+                                {almacen && <h1 className="mt-2">Almacen: {almacen.nombre}</h1>}
+                                {propietarioAlmacen ? <form onSubmit={editarNombreAlmacen}>
+                                <div className="row mt-4 align-items-center">
+                                    <div className="col-md-2"></div>
+                                    <div className="col-md-5">
+                                        <input 
+                                            value={nombreAlmacen}
+                                            onChange={ (e) => setNombreAlmacen(e.target.value)}
+                                            type="text"
+                                            className="form-control"
+                                            placeholder="(Nuevo nombre)"
+                                            style={{ width: '100%'}}
+                                            aria-label="Ingresar nuevo nombre de almacen"
+                                        />
                                     </div>
-                                    </form> : null}
+                                    <div className="col-md-3">
+                                        <button type='submit' className="ms-2 btn primario">Cambiar nombre</button>
+                                    </div>
+                                    <div className="col-md-2"></div>
                                 </div>
-                                <div className="col-md-3"></div>
+                                </form> : null}
                             </div>
-                            <div className="row">
-                                <div className="col">
-                                    {error && (
-                                    <div className='row'>
-                                        <div className='col'>
-                                            <div className='alert alert-danger mt-4' role='alert'>
-                                                {error}
-                                            </div>
+                            <div className="col-md-3"></div>
+                        </div>
+                        <div className="row">
+                            <div className="col">
+                                {error && (
+                                <div className='row'>
+                                    <div className='col'>
+                                        <div className='alert alert-danger mt-4' role='alert'>
+                                            {error}
                                         </div>
                                     </div>
-                                    )}
                                 </div>
+                                )}
                             </div>
-                            <div className="row mt-4">
-                                <div className="col-md-6 mt-3">
-                                    <CompShowObjetos></CompShowObjetos>
-                                </div>
-                                <div className="col-md-6 mt-3">
-                                    <CompShowMiembros/>
-                                </div>
+                        </div>
+                        <div className="row mt-4">
+                            <div className="col-md-6 mt-3">
+                                <CompShowObjetos></CompShowObjetos>
+                            </div>
+                            <div className="col-md-6 mt-3">
+                                <CompShowMiembros/>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </html>
+        </div>
     )
 }
 
