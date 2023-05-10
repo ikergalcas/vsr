@@ -23,6 +23,7 @@ const CompShowMisAlmacenes = () => {
         let almacens = res.data
         let almacenesFiltrados = almacens.filter(almacen => almacen.propietario == idUser)
         setAlmacenes(almacenesFiltrados)
+        window.location.reload()
     }
 
     const deleteAlmacen = async (id) => {
