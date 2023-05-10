@@ -109,7 +109,7 @@ const CompEditObjeto = () => {
             </div>
             <div className="row">
                 <div className="col">
-                    <h5 tabIndex="0">Objeto de: {dueno.nombre}</h5>
+                    <h2 tabIndex="0">Objeto de: {dueno.nombre}</h2>
                 </div>
             </div>
             <div className="row">
@@ -119,7 +119,7 @@ const CompEditObjeto = () => {
                             <div className="row">
                                     <div className='col-md-3'></div>
                                     <div className='col-md-6'>
-                                    <label className='form-label' tabIndex="0" for="nombre">Nombre</label>
+                                    <label className='form-label' tabIndex="0" htmlFor="nombre">Nombre</label>
                                         {propietario ? 
                                         <input
                                         id="nombre"
@@ -144,7 +144,7 @@ const CompEditObjeto = () => {
                         </div>
 
                         <div className="mb-3">
-                            <label className='form-label' tabIndex="0" for="condiciones">Condiciones</label>
+                            <label className='form-label' tabIndex="0" htmlFor="condiciones">Condiciones</label>
                             {propietario ?
                             <textarea cols={30} rows={5}
                                 id="condiciones"
@@ -161,7 +161,7 @@ const CompEditObjeto = () => {
                         </div>
 
                         <div className="mb-3">
-                            <label className='form-label' tabIndex="0" for="descripcion">Descripcion</label>
+                            <label className='form-label' tabIndex="0" htmlFor="descripcion">Descripcion</label>
                             {propietario ?
                             <textarea cols={30} rows={5} 
                                 id="descripcion"
@@ -182,7 +182,7 @@ const CompEditObjeto = () => {
                                 <div className='row'>
                                     <div className='col-md-3'></div>
                                     <div className='col-md-6'>
-                                    <label className='form-label' tabIndex="0" for="ubicacion">Ubicacion</label>
+                                    <label className='form-label' tabIndex="0" htmlFor="ubicacion">Ubicacion</label>
                                         <input
                                         id="ubicacion"
                                         value={ubicacion}
