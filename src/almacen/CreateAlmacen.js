@@ -186,26 +186,26 @@ if (toastTrigger) {
                                                         )}
                                                     </div>
                                                 </div>
+                                                {invitados.length > 0 && (
                                                 <div className='row'>
                                                     <div className='col-xl-4'></div>
                                                     <div className='col-xl-4'>
-                                                        <div style={{width:'50 vmin', justifyContent:'center',alignItems:'center'}}>
-                                                            {invitados.length > 0 ? 
-                                                            <ul className="list-group">
-                                                                {invitados.map((inv) => (
-                                                                    <li className="list-group-item d-flex justify-content-between align-items-center" tabindex="0"key={inv}>
-                                                                    {inv}
-                                                                    <button className="btn rojo" onClick={(e) => deleteInvitado(e, inv)}>
-                                                                        <i className="fa-solid fa-trash" aria-label="Borrar persona compartida"></i>
-                                                                    </button>
-                                                                    </li>
-                                                                ))}
-                                                            </ul>
-                                                            : null}
-                                                        </div>
+                                                    <div style={{ width: '50 vmin', justifyContent: 'center', alignItems: 'center' }}>
+                                                        <ul className="list-group">
+                                                        {invitados.map((inv) => (
+                                                            <li className="list-group-item d-flex justify-content-between align-items-center" key={inv} tabIndex="0">
+                                                            {inv}
+                                                            <button className="btn rojo" onClick={(e) => deleteInvitado(e, inv)}>
+                                                                <i className="fa-solid fa-trash" aria-label="Borrar persona compartida"></i>
+                                                            </button>
+                                                            </li>
+                                                        ))}
+                                                        </ul>
+                                                    </div>
                                                     </div>
                                                     <div className='col-xl-4'></div>
                                                 </div>
+                                                )}
                                             </div>
                                             <button type='submit' className='btn btn-lg primario' tabindex="0">Crear nuevo almacen</button><br/>
                                             <button onClick={volverAtras} className='btn btn-secondary mt-2' tabindex="0">Volver atrás</button>
