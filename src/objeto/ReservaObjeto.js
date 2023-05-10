@@ -20,6 +20,8 @@ const CompReservaObjeto = () => {
     const {idObjeto} = useParams()
     const [error, setError] = useState(null)
 
+    const [showConfirmation, setShowConfirmation] = useState(false);
+
     const [objeto, setObjeto] = useState('')
     useEffect( () => {
         getObjeto()
@@ -83,13 +85,7 @@ const CompReservaObjeto = () => {
 
         if (!checkFechas(fechaInicio,fechaFin)){
             if(moment(fechaInicio).isSameOrAfter(moment().startOf('day')) && moment(fechaInicio).isBefore(moment(fechaFin)) && (!coincide(fechaInicio, fechaFin))) {     //La fecha inicio es posterior a la actual
-                axios.post(URIreservas, {
-                    fechaInicio: fechaInicio,
-                    fechaFin: fechaFin,
-                    usuarioReserva: idUser,
-                    objetoReserva: idObjeto
-                })
-                window.location.reload()
+                setShowConfirmation(true);
             } else {
                 setError('Seleccione una fecha de reserva válida')
             }
@@ -202,6 +198,49 @@ const CompReservaObjeto = () => {
             </div>
         )}
       </form>
+                {showConfirmation && (
+                <div className="popup-container">
+                    <div className="popup">
+                    <p>¿Estás seguro de que deseas realizar la reserva?</p>
+                    <div className="popup-buttons">
+                        <button
+                        className="btn mb-2 primario" tabIndex="0" aria-label="Confirmar reserva" title="Confirmar la reserva"
+                        onClick={() => {
+                            // Realizar la reserva
+                            axios
+                            .post(URIreservas, {
+                                fechaInicio: fechaInicio,
+                                fechaFin: fechaFin,
+                                usuarioReserva: idUser,
+                                objetoReserva: idObjeto,
+                            })
+                            .then(() => {
+                                window.location.reload();
+                            })
+                            .catch((error) => {
+                                // Manejar el error de la reserva
+                                setError('Error al realizar la reserva');
+                            });
+
+                            // Cerrar el popup de confirmación
+                            setShowConfirmation(false);
+                        }}
+                        >
+                        Confirmar
+                        </button>
+                        <button
+                        className="btn mb-2 rojo" tabIndex="0" aria-label="Cancelar reserva" title="Cancelar la reserva"
+                        onClick={() => {
+                            // Cerrar el popup de confirmación
+                            setShowConfirmation(false);
+                        }}
+                        >
+                        Cancelar
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                )}
     </div>
   )
 }
