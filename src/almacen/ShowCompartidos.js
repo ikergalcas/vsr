@@ -44,7 +44,6 @@ const CompShowCompartidos = () => {
         let mis_compartidos = almacenes.filter(almacen => mis_almacenes_compartidos_id.includes(almacen.id))
         
         setAlmacens(mis_compartidos)
-        window.location.reload()
     }
 
     const salirAlmacen = async (id) => {
