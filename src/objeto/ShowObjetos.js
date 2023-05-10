@@ -91,7 +91,7 @@ const CompShowObjetos = () => {
                     </div>
                 ))}
             </div>
-            <Link to={`/${idAlmacen}/${idUser}/createObjeto`} className='btn primario'>Añadir objeto</Link>
+            <Link to={`/${idAlmacen}/${idUser}/crearObjeto`} className='btn primario'>Añadir objeto</Link>
         </div>
     )
 }
