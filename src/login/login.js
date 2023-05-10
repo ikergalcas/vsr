@@ -73,7 +73,7 @@ const CompLogin = () => {
                                                     style={{ width: 'auto', margin: '0 auto' }}
                                                     required='true'
                                                     aria-label="Ingrese su nombre de usuario"
-                                                    for="user"
+                                                    title="Nombre de usuario"
                                                 />
                                             </div>
                                             <div className='mb-3'>
@@ -86,7 +86,7 @@ const CompLogin = () => {
                                                     style={{ width: 'auto', margin: '0 auto' }}
                                                     required='true'
                                                     aria-label="Ingrese su contraseña"
-                                                    for="password"
+                                                    title="Contraseña"
                                                 />
                                             </div>
                                             {error && (
