@@ -64,7 +64,7 @@ const CompLogin = () => {
                                     <div className='col'>
                                         <form onSubmit={inicioSesion}>
                                             <div className='mb-3'>
-                                                <label className='form-label' for="user">Nombre de usuario</label>
+                                                <label className='form-label' htmlFor="user">Nombre de usuario</label>
                                                 <input
                                                     value={user}
                                                     onChange={ (e) => setUser(e.target.value)}
@@ -76,7 +76,7 @@ const CompLogin = () => {
                                                 />
                                             </div>
                                             <div className='mb-3'>
-                                                <label className='form-label' for="password">Contraseña</label>
+                                                <label className='form-label' htmlFor="password">Contraseña</label>
                                                 <input
                                                     value={password}
                                                     onChange={ (e) => setPassword(e.target.value)}
@@ -96,13 +96,13 @@ const CompLogin = () => {
                                                     </div>
                                                 </div>
                                             )}
-                                            <button type='submit' className='btn primario' tabindex="0" for="Iniciar">Iniciar Sesion</button>
+                                            <button type='submit' className='btn primario' tabindex="0" htmlFor="Iniciar">Iniciar Sesion</button>
                                         </form>
                                     </div>
                                 </div>
                                 <div className='row'>
                                     <div className='col mt-3'>
-                                        <h3 tabindex="0">¿No tienes cuenta? <Link to="/registro" className='btn rojo' tabindex="0" for="Registrar">Registrate</Link></h3>
+                                        <h2 tabindex="0">¿No tienes cuenta? <Link to="/registro" className='btn rojo' tabindex="0" htmlFor="Registrar">Registrate</Link></h3>
                                         
                                     </div>
                                 </div>
