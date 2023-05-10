@@ -45,6 +45,7 @@ const CompLogin = () => {
     }
 
     return(
+        <html lang='esl'>
         <div className='d-flex align-items-center vh-100 fondoLogin'>
             <div className='container'>
                 <div className='row'>
@@ -111,6 +112,7 @@ const CompLogin = () => {
                 </div>
             </div>
         </div>
+        </html>
     )
 }
 
