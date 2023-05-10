@@ -49,7 +49,7 @@ const CompLogin = () => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-lg-8'>
-                        <img  tabindex="0" src={fotoPortada} alt='Imagen de portada, Compartir es ahorrar' style={{width: '600px', height:'600px', objectFit:'contain'}} className="card-img-top img-fluid"></img>
+                        <img  tabindex="0" src={fotoPortada} alt='Imagen de portada' style={{width: '600px', height:'600px', objectFit:'contain'}} className="card-img-top img-fluid"></img>
                     </div>
                     <div className='col-lg-4'>
                         <div className='card mb-3' style={{backgroundColor:'rgba(255, 255, 255, 0.7)', marginTop:'30%'}}>
@@ -63,7 +63,7 @@ const CompLogin = () => {
                                     <div className='col'>
                                         <form onSubmit={inicioSesion}>
                                             <div className='mb-3'>
-                                                <label className='form-label'>Nombre de usuario</label>
+                                                <label className='form-label' for="user">Nombre de usuario</label>
                                                 <input
                                                     value={user}
                                                     onChange={ (e) => setUser(e.target.value)}
@@ -75,7 +75,7 @@ const CompLogin = () => {
                                                 />
                                             </div>
                                             <div className='mb-3'>
-                                                <label className='form-label'>Contraseña</label>
+                                                <label className='form-label' for="password">Contraseña</label>
                                                 <input
                                                     value={password}
                                                     onChange={ (e) => setPassword(e.target.value)}
