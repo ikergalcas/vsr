@@ -56,7 +56,7 @@ const CompRegistro = () =>{
                         <div className='row'>
                             <div className='col'>
                                 <div className='card' style={{padding: '20px', backgroundColor:'rgba(255, 255, 255, 0.7)'}}>
-                                    <h1 style={{fontSize: '2.5rem', color: '#333'}} tabindex="0">¿Qué es VSR?</h1>
+                                    <h2 style={{fontSize: '2.5rem', color: '#333'}} tabindex="0">¿Qué es VSR?</h2>
                                     <div className='d-flex text-start'>
                                         <p style={{fontSize: '1.25rem', color: '#555'}} tabindex="0">VSR es una aplicación diseñada para crear almacenes virtuales compartidos entre familiares, amigos y conocidos, permitiéndoles gestionar inventarios de distintos ámbitos y sus respectivos objetos. Con VSR, los usuarios tienen la capacidad de cambiar objetos, editar su descripción, condiciones de uso y ubicación reciente, y también pueden reservar los objetos por un tiempo determinado. En resumen, VSR es una solución de gestión de inventario en línea altamente personalizable y colaborativa.</p>
                                     </div>
