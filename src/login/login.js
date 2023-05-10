@@ -73,6 +73,7 @@ const CompLogin = () => {
                                                     style={{ width: 'auto', margin: '0 auto' }}
                                                     required='true'
                                                     aria-label="Ingrese su nombre de usuario"
+                                                    for="user"
                                                 />
                                             </div>
                                             <div className='mb-3'>
@@ -85,6 +86,7 @@ const CompLogin = () => {
                                                     style={{ width: 'auto', margin: '0 auto' }}
                                                     required='true'
                                                     aria-label="Ingrese su contraseña"
+                                                    for="password"
                                                 />
                                             </div>
                                             {error && (
@@ -102,7 +104,7 @@ const CompLogin = () => {
                                 </div>
                                 <div className='row'>
                                     <div className='col mt-3'>
-                                        <h2 tabindex="0">¿No tienes cuenta? <Link to="/registro" className='btn rojo' tabindex="0" htmlFor="Registrar">Registrate</Link></h3>
+                                        <h2 tabindex="0">¿No tienes cuenta? <Link to="/registro" className='btn rojo' tabindex="0" htmlFor="Registrar">Registrate</Link></h2>
                                         
                                     </div>
                                 </div>
