@@ -56,7 +56,7 @@ const CompRegistro = () =>{
                         <div className='row'>
                             <div className='col'>
                                 <div className='card' style={{padding: '20px', backgroundColor:'rgba(255, 255, 255, 0.7)'}}>
-                                    <h1 style={{fontSize: '2.5rem', color: '#333'}} tabindex="0">¿Qué es VSR?</h1>
+                                    <h2 style={{fontSize: '2.5rem', color: '#333'}} tabindex="0">¿Qué es VSR?</h2>
                                     <div className='d-flex text-start'>
                                         <p style={{fontSize: '1.25rem', color: '#555'}} tabindex="0">VSR es una aplicación diseñada para crear almacenes virtuales compartidos entre familiares, amigos y conocidos, permitiéndoles gestionar inventarios de distintos ámbitos y sus respectivos objetos. Con VSR, los usuarios tienen la capacidad de cambiar objetos, editar su descripción, condiciones de uso y ubicación reciente, y también pueden reservar los objetos por un tiempo determinado. En resumen, VSR es una solución de gestión de inventario en línea altamente personalizable y colaborativa.</p>
                                     </div>
@@ -68,7 +68,7 @@ const CompRegistro = () =>{
                                 <div className='card'>
                                     <img alt='foto almacen' src={fotoAlmacen} style={{width: '100%', height:'100%', objectFit:'contain'}} className="card-img-top img-fluid"></img>
                                     <div className='card-title mt-2'>
-                                        <h5>Almacenes</h5>
+                                        <h2>Almacenes</h2>
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ const CompRegistro = () =>{
                                 <div className='card'>
                                     <img alt='foto objeto' src={fotoObjeto} style={{width: '100%', height:'100%', objectFit:'contain'}} className="card-img-top img-fluid"></img>
                                     <div className='card-title mt-2'>
-                                        <h5>Objetos</h5>
+                                        <h2>Objetos</h2>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ const CompRegistro = () =>{
                                 <div className='card'>
                                     <img alt='foto usuario' src={fotoUsuario} style={{width: '100%', height:'100%', objectFit:'contain'}} className="card-img-top img-fluid"></img>
                                     <div className='card-title mt-2'>
-                                        <h5>Usuarios</h5>
+                                        <h2>Usuarios</h2>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@ const CompRegistro = () =>{
                                         <div className='col'>
                                             <form onSubmit={registro}>
                                                 <div className='mb-3'>
-                                                    <label className='form-label'>Nombre de usuario*</label>
+                                                    <label className='form-label' htmlFor="nombreUs">Nombre de usuario*</label>
                                                     <input
                                                         value={nombreUs}
                                                         onChange={ (e) => setNombreUs(e.target.value)}
@@ -113,10 +113,11 @@ const CompRegistro = () =>{
                                                         required='true'
                                                         tabindex="0"
                                                         aria-label="Ingrese su nombre de usuario"
+                                                        title="Nombre de usuario"
                                                     />
                                                 </div>
                                                 <div className='mb-3'>
-                                                    <label className='form-label'>Correo electrónico*</label>
+                                                    <label className='form-label' htmlFor="correo">Correo electrónico*</label>
                                                     <input
                                                         value={correo}
                                                         onChange={ (e) => setCorreo(e.target.value)}
@@ -126,10 +127,11 @@ const CompRegistro = () =>{
                                                         required='true'
                                                         tabindex="0"
                                                         aria-label="Ingrese su correo electronico"
+                                                        title="Correo electornico"
                                                     />
                                                 </div>
                                                 <div className='mb-3'>
-                                                    <label className='form-label'>Contraseña*</label>
+                                                    <label className='form-label' htmlFor="password">Contraseña*</label>
                                                     <input
                                                         value={password}
                                                         onChange={ (e) => setPassword(e.target.value)}
@@ -139,10 +141,11 @@ const CompRegistro = () =>{
                                                         required='true'
                                                         tabindex="0"
                                                         aria-label="Ingrese una contraseña"
+                                                        title="Contraseña"
                                                     />
                                                 </div>
                                                 <div className='mb-3'>
-                                                    <label className='form-label'>Nombre*</label>
+                                                    <label className='form-label' htmlFor="nombre">Nombre*</label>
                                                     <input
                                                         value={nombre}
                                                         onChange={ (e) => setNombre(e.target.value)}
@@ -152,10 +155,11 @@ const CompRegistro = () =>{
                                                         required='true'
                                                         tabindex="0"
                                                         aria-label="Ingrese su nombre"
+                                                        title="Nombre"
                                                     />
                                                 </div>
                                                 <div className='mb-5'>
-                                                    <label className='form-label'>Apellido</label>
+                                                    <label className='form-label' htmlFor="apellido">Apellido</label>
                                                     <input
                                                         value={apellido}
                                                         onChange={ (e) => setApellido(e.target.value)}
@@ -164,6 +168,7 @@ const CompRegistro = () =>{
                                                         style={{ width: 'auto', margin: '0 auto' }}
                                                         tabindex="0"
                                                         aria-label="Ingrese su apellido"
+                                                        title="Apellido"
                                                     />
                                                 </div>
                                                 {error && (

@@ -146,6 +146,7 @@ const CompReservaObjeto = () => {
             style={{ height: '55vh', backgroundColor: 'white'}}
             tabIndex="-1"
             id="calendar"
+            title="Calendario"
         />
         </div>
       
@@ -160,8 +161,9 @@ const CompReservaObjeto = () => {
                         defaultValue ={fechaInicio}
                         onChange={(e) => setFechaInicio(e.target.value)}
                         type="date"
-                        className="form-control"
+                        className={`form-control ${error ? 'error' : ''}`}
                         aria-label="Ingrese la fecha de inicio de la reserva"
+                        title="Fecha de inicio"
                     />
                 </div>
                 <div className='col-md-3'></div>
@@ -178,8 +180,9 @@ const CompReservaObjeto = () => {
                                 defaultValue ={fechaFin}
                                 onChange={(e) => setFechaFin(e.target.value)}
                                 type="date"
-                                className="form-control"
+                                className={`form-control ${error ? 'error' : ''}`}
                                 aria-label="Ingrese la fecha de fin de la reserva"
+                                title="Fecha de fin"
                             />
                     </div>
                     <div className='col-md-3'></div>
@@ -188,7 +191,7 @@ const CompReservaObjeto = () => {
 
         
         </div>
-        <button type="submit" className='btn mb-2 primario' tabIndex="0" aria-label="Botón de reserva">Reservar</button>
+        <button type="submit" className='btn mb-2 primario' tabIndex="0" aria-label="Botón de reserva" title="Reservar objeto">Reservar</button>
         {error && (
             <div className='row'>
                 <div className='col'>

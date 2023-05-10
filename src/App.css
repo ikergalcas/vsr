@@ -135,3 +135,7 @@
 .rojo{
   background-color: #EF726B !important;
 }
+
+.error{
+  border: 2% red solid;
+}
