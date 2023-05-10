@@ -61,7 +61,7 @@ const CompShowMisAlmacenes = () => {
         <div className="container">
             <div className="row">
                 <div className="col p-4">
-                    <h1 tabindex="0">Mis Almacenes 1</h1>
+                    <h1 tabindex="0">Mis Almacenes</h1>
                 </div>
             </div>
             <div className="row row-cols-4 align-items-center">
