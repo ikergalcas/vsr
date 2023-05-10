@@ -61,8 +61,7 @@ const CompShowObjetos = () => {
         <div className="container mb-4">
             <div className="row">
                 <div className="col-md-1">
-                    <p>Prueba</p>
-                    <h1 tabindex="0">Objetos AA</h1>
+                    <h1 tabindex="0">Objetos</h1>
                 </div>
                 <div className="col-md-11"/>
             </div>
