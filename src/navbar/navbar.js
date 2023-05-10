@@ -22,7 +22,7 @@
           </Nav.Link>
         </Nav>
         <Nav>
-          <NavDropdown drop='start' className='me-3' title={<img src={fotoUsuario} style={{ width: '45px', borderRadius: '20%' }} alt="icono usuario"/>} id="basic-nav-dropdown">
+          <NavDropdown drop='start' className='me-3' title={<img src={fotoUsuario} style={{ width: '6vh', borderRadius: '20%' }} alt="icono usuario"/>} id="basic-nav-dropdown">
             <NavDropdown.Item href={`/${props.idUser}/editUser`}>Editar perfil</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="/">Cerrar sesión</NavDropdown.Item>

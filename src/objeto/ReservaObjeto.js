@@ -1,14 +1,14 @@
 import React from 'react'
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
-import { useParams, Link, useNavigate, Navigate } from "react-router-dom"
+import 'moment/locale/es'
+import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import axios from 'axios'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 
 require('moment/locale/es.js');
 const localizer = momentLocalizer(moment)
-const fechaActual = moment().toDate()
 
 
 const URIreservas = "https://interfaces-vsr.herokuapp.com/reservas/"
@@ -81,7 +81,7 @@ const CompReservaObjeto = () => {
     const reservar = async (e) => {
         e.preventDefault()
 
-        if (checkFechas(fechaInicio,fechaFin)){
+        if (!checkFechas(fechaInicio,fechaFin)){
             if(moment(fechaInicio).isSameOrAfter(moment().startOf('day')) && moment(fechaInicio).isBefore(moment(fechaFin)) && (!coincide(fechaInicio, fechaFin))) {     //La fecha inicio es posterior a la actual
                 axios.post(URIreservas, {
                     fechaInicio: fechaInicio,
@@ -126,7 +126,7 @@ const CompReservaObjeto = () => {
       }));
 
       function checkFechas(fechaInicio, fechaFin){
-        return (isNaN(fechaInicio))||(isNaN(fechaFin));
+        return !fechaInicio || !fechaFin;
       }
 
 
@@ -154,10 +154,10 @@ const CompReservaObjeto = () => {
             <div className='row'>
                 <div className='col-md-3'></div>
                 <div className='col-md-6'>
-                <label className='form-label' tabIndex="0" for="fechaInicio">Fecha inicio</label>
+                <label className='form-label' tabIndex="0" htmlFor="fechaInicio">Fecha inicio</label>
                     <input
                         id="fechaInicio"
-                        value={fechaInicio}
+                        defaultValue ={fechaInicio}
                         onChange={(e) => setFechaInicio(e.target.value)}
                         type="date"
                         className="form-control"
@@ -172,10 +172,10 @@ const CompReservaObjeto = () => {
             <div className='row'>
                     <div className='col-md-3'></div>
                     <div className='col-md-6'>
-                        <label className='form-label' tabIndex="0" for="fechaFin">Fecha fin</label>
+                        <label className='form-label' tabIndex="0" htmlFor="fechaFin">Fecha fin</label>
                             <input
                                 id="fechaFin"
-                                value={fechaFin}
+                                defaultValue ={fechaFin}
                                 onChange={(e) => setFechaFin(e.target.value)}
                                 type="date"
                                 className="form-control"
