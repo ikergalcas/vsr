@@ -82,7 +82,7 @@ function AlmacenBloque () {
                                                 onChange={ (e) => setNombreAlmacen(e.target.value)}
                                                 type="text"
                                                 className="form-control"
-                                                placeholder="(Nuevo nombre)"
+                                                placeholder="(Cambiar nombre)"
                                                 style={{ width: '100%'}}
                                                 aria-label="Ingresar nuevo nombre de almacen"
                                             />
