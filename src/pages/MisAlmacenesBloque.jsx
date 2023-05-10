@@ -7,7 +7,7 @@ function MisAlmacenesBloque () {
     const {idUser} = useParams()
 
     return(
-        <html lang="esp">
+        <html lang="es">
             <div>
                 <NavbarPer idUser={idUser}></NavbarPer>
                 <div className="container-fluid h-100">

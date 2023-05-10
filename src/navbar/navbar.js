@@ -7,6 +7,7 @@
 
   function NavbarPer(props) {
     return (
+    <html lang="es">
     <Navbar expand="lg" style={{background: '#bb5751'}}>
       <Navbar.Brand className='ms-3'>
         <img alt="logo" src={logo} className='navbar-logo'/>
@@ -30,6 +31,7 @@
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+    </html>
     );
   }
 
