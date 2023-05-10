@@ -129,8 +129,9 @@ if (toastTrigger) {
                                     <div className='col'>
                                         <form onSubmit={crearAlmacen}>
                                             <div className='mb-3 mt-3'>
-                                                <label className='form-label'>Nombre*</label>
+                                                <label className='form-label' for="nombre">Nombre*</label>
                                                 <input
+                                                    name="nombre"
                                                     value={name}
                                                     onChange={ (e) => setName(e.target.value)}
                                                     type="text"
@@ -139,8 +140,9 @@ if (toastTrigger) {
                                                     required='true'
                                                     aria-label="Ingrese el nombre del almacen"
                                                 />
-                                                <label className='form-label mt-3'>Enlace foto</label> <br/>
+                                                <label className='form-label mt-3' for="foto">Enlace foto</label> <br/>
                                                 <input
+                                                    name="foto"
                                                     value={foto}
                                                     onChange={ (e) => setFoto(e.target.value)}
                                                     type="text"
@@ -149,11 +151,12 @@ if (toastTrigger) {
                                                     aria-label="Ingrese un link de imagen para el almacen"
                                                 />
                                                 <div className='mb-3 mt-3'>
-                                                    <label className='form-label'>Compartir con</label> <br/>
+                                                    <label className='form-label' for="invitado">Compartir con</label> <br/>
                                                     <div className='row'>
                                                         <div className='col-md-3'></div>
                                                         <div className='col-md-5 d-flex justify-content-center align-items-center'>
                                                             <input
+                                                            name="invitado"
                                                             value={invitado}
                                                             onChange={ (e) => setInvitado(e.target.value)}
                                                             type="email"
