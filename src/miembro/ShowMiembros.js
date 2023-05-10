@@ -169,11 +169,12 @@ const CompShowMiembros = () => {
             {propietarioAlmacen ? 
             <div className="mb-2 mt-3">
                 <form onSubmit={invitar}>
-                    <label className='form-label' tabindex="0">Invitar miembro</label>
+                    <label htmlFor="email" className='form-label' tabindex="0">Invitar miembro</label>
                     <div className="row">
                         <div className="col-md-3"></div>
                         <div className="col-md-5 mb-3 d-flex justify-content-center align-items-center">
                             <input
+                            id="email"
                             value={email}
                             onChange={ (e) => setEmail(e.target.value)}
                             aria-label="Ingrese el correo electronico para invitar"
