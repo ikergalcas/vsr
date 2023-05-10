@@ -180,6 +180,7 @@ const CompShowMiembros = () => {
                             type="text"
                             className='form-control'
                             placeholder="usuario@ejemplo.com"
+                            title="Ingresar el correo electronico del usuario que desea invitar al almacen"
                             />
                         </div>
                         <div className="col-md-2">
