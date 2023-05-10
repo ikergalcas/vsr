@@ -50,7 +50,7 @@ const CompLogin = () => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-lg-8'>
-                        <img  tabindex="0" src={fotoPortada} alt='Imagen de portada' style={{width: '600px', height:'600px', objectFit:'contain'}} className="card-img-top img-fluid"></img>
+                        <img  tabindex="0" src={fotoPortada} alt='Imagen de portada' style={{width: '600px', height:'600px', objectFit:'contain'}} longdesc="almacen.txt" className="card-img-top img-fluid"></img>
                     </div>
                     <div className='col-lg-4'>
                         <div className='card mb-3' style={{backgroundColor:'rgba(255, 255, 255, 0.7)', marginTop:'30%'}}>
@@ -74,6 +74,8 @@ const CompLogin = () => {
                                                     required='true'
                                                     aria-label="Ingrese su nombre de usuario"
                                                     title="Nombre de usuario"
+                                                    onchange="if(this.value.length < 8) 
+                                                    alert('Debe ser un usuario de longitud mayor a 8');"
                                                 />
                                             </div>
                                             <div className='mb-3'>
@@ -87,6 +89,8 @@ const CompLogin = () => {
                                                     required='true'
                                                     aria-label="Ingrese su contraseña"
                                                     title="Contraseña"
+                                                    onchange="if(this.value.length < 8) 
+                                                    alert('Debe ser una contraseña de longitud mayor a 8');"
                                                 />
                                             </div>
                                             {error && (
