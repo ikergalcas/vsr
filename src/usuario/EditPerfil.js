@@ -9,14 +9,9 @@ const CompEditPerfil = () => {
     const {idUser} = useParams()
     const navigate = useNavigate()
 
-    /*
-    const [username, setUsername] = useState(usuarioOriginal.data.nombreUsuario)
-    const [email, setEmail] = useState(usuarioOriginal.data.correo)
-    const [password, setPassword] = useState(usuarioOriginal.data.contrasena)
-    const [name, setName] = useState(usuarioOriginal.data.nombre)
-    const [apellid, setApellid] = useState(usuarioOriginal.data.apellido)
-    */
+    const URIusuarios = "https://interfaces-vsr.herokuapp.com/usuarios/"
 
+    const [error, setError] = useState(null)
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -33,20 +28,55 @@ const CompEditPerfil = () => {
         setPassword(usuarioOriginal.data.contrasena)
         setName(usuarioOriginal.data.nombre)
         setApellid(usuarioOriginal.data.apellido)
+        const auxUser = usuarioOriginal
     }
 
     const editar = async (e) => {
         e.preventDefault()
+        //¡Hay que comprobar los valores!
 
-        await axios.put(URIuser + idUser, {
-            nombreUsuario: username,
-            correo: email,
-            contrasena: password,
-            nombre: name,
-            apellido: apellid
-        })
+        const res = await axios.get(URIuser + idUser)
+        const usuarioOriginal = res.data
+        console.log(usuarioOriginal.nombreUsuario)
+        console.log(usuarioOriginal.correo)
 
-        navigate(-1)
+        const isUsernameValid = await noEncontradoPorUsername(username, usuarioOriginal);
+        const isEmailValid = await noEncontradoPorEmail(email, usuarioOriginal);
+
+        if (isUsernameValid || isEmailValid){
+            await axios.put(URIuser + idUser, {
+                nombreUsuario: username,
+                correo: email,
+                contrasena: password,
+                nombre: name,
+                apellido: apellid
+            })
+            navigate(-1)
+        }else{
+            if (usuarioOriginal.nombreUsuario == username && usuarioOriginal.correo == email)
+                navigate(-1)
+            else
+                setError("El usuario o el correo electrónico están en uso")
+        }
+ 
+    }
+
+    const noEncontradoPorUsername = async (username, usuarioOriginal) => {
+        const res = await axios.get(URIusuarios)
+        const data = res.data
+        const usuarios = data.filter(user => user !== usuarioOriginal)
+
+        const usuario = usuarios.find(user => user.nombreUsuario == username)
+        return usuario == undefined
+    }
+
+    const noEncontradoPorEmail = async (email, usuarioOriginal) => {
+        const res = await axios.get(URIusuarios)
+        const data = res.data
+        const usuarios = data.filter(user => user != usuarioOriginal)
+        
+        const usuario = usuarios.find(user => user.correo == email)
+        return usuario == undefined
     }
 
     const volverAtras = (e) => {
@@ -141,6 +171,15 @@ const CompEditPerfil = () => {
                                             </div>
                                             <button type='submit' className='btn primario mt-3'  tabindex="0" title='Confirmar los cambios'>Confirmar Cambios</button> <br/>
                                             <button onClick={volverAtras} className='btn btn-secondary mt-2'  tabindex="0" title='Volver a la página anterior'>Volver atrás</button> 
+                                            {error && (
+                                                <div className='row'>
+                                                    <div className='col'>
+                                                        <div className='alert alert-danger' role='alert'>
+                                                            {error}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            )}
                                         </form>
                                     </div>
                                 </div>
