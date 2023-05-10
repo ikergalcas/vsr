@@ -139,6 +139,7 @@ if (toastTrigger) {
                                                     style={{ width: '40%', margin: '0 auto' }}
                                                     required='true'
                                                     aria-label="Ingrese el nombre del almacen"
+                                                    title="Nombre de almacen"
                                                 />
                                                 <label className='form-label mt-3' for="foto">Enlace foto</label> <br/>
                                                 <input
@@ -149,6 +150,7 @@ if (toastTrigger) {
                                                     className='form-control'
                                                     style={{ width: '60%', margin: '0 auto' }}
                                                     aria-label="Ingrese un link de imagen para el almacen"
+                                                    title="Foto del almacen"
                                                 />
                                                 <div className='mb-3 mt-3'>
                                                     <label className='form-label' for="invitado">Compartir con</label> <br/>
@@ -164,6 +166,7 @@ if (toastTrigger) {
                                                             placeholder='usuario@ejemplo.com'
                                                             style={{ width: '100%'}}
                                                             aria-label="Ingrese el correo de la persona con quien compartir"
+                                                            title="Invitado del almacen"
                                                             />
                                                         </div>
                                                         <div className='col-md-1 align-items-start'>
