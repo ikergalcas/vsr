@@ -49,6 +49,7 @@ const CompRegistro = () =>{
     }
 
     return(
+        <html lang="es">
         <div className='d-flex align-items-center vh-100 fondoLogin'>
             <div className='container'>
                 <div className='row'>
@@ -192,6 +193,7 @@ const CompRegistro = () =>{
                 </div>
             </div>
         </div>
+        </html>
     )
 }
 
