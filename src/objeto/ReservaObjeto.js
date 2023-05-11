@@ -121,7 +121,7 @@ const CompReservaObjeto = () => {
         description: objeto.nombre
       }));
 
-      function checkFechas(fechaInicio, fechaFin){
+    function checkFechas(fechaInicio, fechaFin){
         return !fechaInicio || !fechaFin;
       }
 
@@ -139,11 +139,13 @@ const CompReservaObjeto = () => {
             events={eventos}
             startAccessor="start"
             endAccessor="end"
+            className={'REACT-CALENDAR p-2'}
+            view='month'
             style={{ height: '55vh', backgroundColor: 'white'}}
-            tabIndex="-1"
+            tabIndex={-1}
             id="calendar"
             title="Calendario"
-        />
+            />
         </div>
       
       <form onSubmit={reservar}>
