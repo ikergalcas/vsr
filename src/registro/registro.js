@@ -77,7 +77,7 @@ const CompRegistro = () =>{
                                 <div className='card'>
                                     <img alt='foto objeto' src={fotoObjeto} style={{width: '100%', height:'100%', objectFit:'contain'}} className="card-img-top img-fluid"></img>
                                     <div className='card-title mt-2'>
-                                        <h2>Objetos</h2>
+                                        <h3>Objetos</h3>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ const CompRegistro = () =>{
                                 <div className='card'>
                                     <img alt='foto usuario' src={fotoUsuario} style={{width: '100%', height:'100%', objectFit:'contain'}} className="card-img-top img-fluid"></img>
                                     <div className='card-title mt-2'>
-                                        <h2>Usuarios</h2>
+                                        <h4>Usuarios</h4>
                                     </div>
                                 </div>
                             </div>
