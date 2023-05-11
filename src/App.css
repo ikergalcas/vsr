@@ -173,3 +173,7 @@
 .popup-buttons button {
   margin-right: 15%;
 }
+
+.hidden {
+  display: none;
+}
